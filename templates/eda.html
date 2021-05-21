@@ -72,7 +72,11 @@
             </div>
 
         </ul>
+<<<<<<< HEAD
         <!-- End of Sidebar -->
+=======
+        <!-- End of Sidebar -->  
+>>>>>>> d1e4e5388c879d96ac28ef1c260fe613711944c4
 
     </div>
     <!-- End of Page Wrapper -->
@@ -111,11 +115,43 @@
                                 <div class="card-body">
                                     <div class="chart-area", id="bargraph", style="height: max-content;">
                                         <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<<<<<<< HEAD
                                         <script type="text/javascript">
                                             var graphs = {{plot.mapgraph | safe}};
                                             Plotly.plot('bargraph',graphs,{});
                                         </script>
 
+=======
+                                        <script type="text/javascript">      
+                                            var graphs = {{plot.mapgraph | safe}}                                      
+                                            Plotly.plot('bargraph',graphs,{});                                                  
+                                        </script>
+                                        <!-- var graphs = {{plot.mapgraph | safe}} -->  
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Area Chart -->
+                        <div class="container-fluid">
+                            <div class="card shadow mb-6">
+                                <!-- Card Header - Dropdown -->
+                                <div
+                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold text-primary">Overall Status</h6>
+                                    
+                                </div>
+                                <!-- Card Body -->
+                                
+                                <div class="card-body">
+                                    <div class="chart-area", id="treegraph", style="height: min-content;">
+                                        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+                                        <script type="text/javascript">
+                                            var graphs = {{ plot.treegraph | safe}};
+                                            Plotly.plot('treegraph',graphs,{});        
+                                        </script>
+>>>>>>> d1e4e5388c879d96ac28ef1c260fe613711944c4
                                     </div>
                                 </div>
                             </div>
