@@ -5,15 +5,15 @@ import json
 # datetime oprations
 from datetime import timedelta
 import datetime as dt
-import plotly, chart_studio
-import chart_studio.plotly as py
+import plotly#, chart_studio
+# import chart_studio.plotly as py
 import plotly.express as px
 import plotly.graph_objs as go
 # import plotly.figure_factory as ff
 from plotly.subplots import make_subplots
 # for offline ploting
-from plotly.offline import plot, iplot, init_notebook_mode
-init_notebook_mode(connected=True)
+from plotly.offline import plot, init_notebook_mode
+# init_notebook_mode(connected=True)
 import json
 
 
