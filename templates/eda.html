@@ -28,7 +28,7 @@
     <!-- Page Wrapper -->
     <div id="wrapper">
 
-            <!-- Page Wrapper -->
+    <!-- Page Wrapper -->
     <div id="wrapper">
 
         <!-- Sidebar -->
@@ -43,28 +43,28 @@
             </a>
 
             <!-- Divider -->
-            <hr class="sidebar-divider my-0">       
+            <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
                 <a class="nav-link" href="{{ url_for('eda') }}">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <i class="fas fa-fw fa-chart-area"></i>
                     <span>Visualization</span></a>
             </li>
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
                 <a class="nav-link" href="{{ url_for('data') }}">
-                    <i class="fas fa-fw fa-table"></i>
+                    <i class="fas fa-fw fa-file-alt"></i>
                     <span>Data</span></a>
-            </li>          
+            </li>
 
             <!-- Nav Item - Homepage -->
             <li class="nav-item">
                 <a class="nav-link" href="{{ url_for('homepage') }}">
-                    <i class="fas fa-fw fa-chart-area"></i>
+                    <i class="fas fa-fw fa-address-book"></i>
                     <span>Team Introduction</span></a>
-            </li>                   
+            </li>
 
             <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">
@@ -72,11 +72,11 @@
             </div>
 
         </ul>
-        <!-- End of Sidebar -->       
+        <!-- End of Sidebar -->
 
     </div>
     <!-- End of Page Wrapper -->
-    
+
 
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
@@ -90,11 +90,11 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <div class="d-sm-flex align-items-center justify-content-between mb-4">                        
-                        <h1 class="h3 mb-0 text-gray-800">EDA</h1>                        
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800">EDA</h1>
                     </div>
 
-                    
+
                     <div class="row">
 
                         <!-- Area Chart -->
@@ -104,41 +104,18 @@
                                 <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                                     <h6 class="m-0 font-weight-bold text-primary">Confirmed Case Map </h6>
-                                    
+
                                 </div>
                                 <!-- Card Body -->
-                                
+
                                 <div class="card-body">
                                     <div class="chart-area", id="bargraph", style="height: max-content;">
                                         <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
                                         <script type="text/javascript">
                                             var graphs = {{plot.mapgraph | safe}};
-                                            Plotly.plot('bargraph',graphs,{});        
+                                            Plotly.plot('bargraph',graphs,{});
                                         </script>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
 
-                        <!-- Area Chart -->
-                        <div class="container-fluid">
-                            <div class="card shadow mb-6">
-                                <!-- Card Header - Dropdown -->
-                                <div
-                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Overall Status</h6>
-                                    
-                                </div>
-                                <!-- Card Body -->
-                                
-                                <div class="card-body">
-                                    <div class="chart-area", id="treegraph", style="height: min-content;">
-                                        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-                                        <script type="text/javascript">
-                                            var graphs = {{plot.treegraph | safe}};
-                                            Plotly.plot('treegraph',graphs,{});        
-                                        </script>
                                     </div>
                                 </div>
                             </div>
@@ -151,16 +128,16 @@
                                 <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                                     <h6 class="m-0 font-weight-bold text-primary">Confirmed cases over Time </h6>
-                                    
+
                                 </div>
                                 <!-- Card Body -->
-                                
+
                                 <div class="card-body">
                                     <div class="chart-area", id="timegraph", style="height: min-content;">
                                         <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
                                         <script type="text/javascript">
                                             var graphs = {{plot.timegraph | safe}};
-                                            Plotly.plot('timegraph',graphs,{});        
+                                            Plotly.plot('timegraph',graphs,{});
                                         </script>
                                     </div>
                                 </div>
@@ -175,10 +152,10 @@
                                 <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                                     <h6 class="m-0 font-weight-bold text-primary">Covid WHO Region Timeline</h6>
-                                    
+
                                 </div>
                                 <!-- Card Body -->
-                                
+
                                 <div class="card-body">
                                     <div class="text-center">
                                         <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 35rem;"
@@ -195,10 +172,10 @@
                                 <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                                     <h6 class="m-0 font-weight-bold text-primary">GDP per Critical</h6>
-                                    
+
                                 </div>
                                 <!-- Card Body -->
-                                
+
                                 <div class="card-body">
                                     <div class="text-center">
                                         <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 35rem;"
@@ -215,10 +192,10 @@
                                 <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                                     <h6 class="m-0 font-weight-bold text-primary">GDP per Density</h6>
-                                    
+
                                 </div>
                                 <!-- Card Body -->
-                                
+
                                 <div class="card-body">
                                     <div class="text-center">
                                         <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 35rem;"
@@ -228,7 +205,7 @@
                             </div>
                         </div>
 
-                        
+
                     </div>
 
                 </div>
@@ -277,7 +254,7 @@
             </div>
         </div>
     </div>
-    
+
     <!-- Bootstrap core JavaScript-->
     <script src="static/vendor/jquery/jquery.min.js"></script>
     <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -294,7 +271,7 @@
     <!-- Page level custom scripts -->
     <script src="static/js/demo/chart-area-demo.js"></script>
     <script src="static/js/demo/chart-pie-demo.js"></script>
-    
+
 
 </body>
 
