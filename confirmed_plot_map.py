@@ -6,12 +6,12 @@ import plotly
 import chart_studio.plotly as py
 import plotly.express as px
 import json
+import os
 
-
-cur_dir = os.path.dirname(os.path.abspath(__file__))
+THIS_FOLDER = os.path.dirname(os.path.abspath(__file__))
 
 def plot_map():
-    df=pd.read_csv(f'{cur_dir}/country_wise_latest.csv')
+    df=pd.read_csv(os.path.join(THIS_FOLDER, 'static/data/country_wise_latest.csv'))
     col = 'Confirmed'
     pal = 'matter'
 
@@ -23,7 +23,7 @@ def plot_map():
     return graphJSON
 
 def tree_map():
-    df=pd.read_csv(f'{cur_dir}/country_wise_latest.csv')
+    df=pd.read_csv(os.path.join(THIS_FOLDER, 'static/data/country_wise_latest.csv'))
     val_list = ['Country/Region','Deaths', 'Recovered', 'Active']
 
     temp = df[val_list]
@@ -36,7 +36,7 @@ def tree_map():
     return graphJSON
 
 def confirmed_over_time():
-    df=pd.read_csv(f'{cur_dir}/full_grouped.csv')
+    df= pd.read_csv(os.path.join(THIS_FOLDER, 'static/data/full_grouped.csv'))
     df['Date'] = pd.to_datetime(df['Date'], errors='coerce')
     df["Date"].dt.strftime('%Y-%m-%D')
     frame = df["Date"].dt.strftime('%Y-%m-%D')   
