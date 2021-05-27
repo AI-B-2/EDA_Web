@@ -104,15 +104,17 @@
                                 <!-- Card Body -->
 
                                 <div class="card-body">
-                                    <div class="chart-area", id="bargraph", style="height: max-content;">
-                                        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-                                        <script type="text/javascript">      
-                                            var graphs = {{plot.mapgraph | safe}}                                      
-                                            Plotly.plot('bargraph',graphs,{});                                                  
-                                        </script>
-                                        <!-- var graphs = {{plot.mapgraph | safe}} -->  
-                                        
-                                    </div>
+                                    <center>
+                                        <div class="chart-area" id="bargraph">
+                                            <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+                                            <script type="text/javascript">      
+                                                var graphs = {{plot.mapgraph | safe}}                                      
+                                                Plotly.plot('bargraph',graphs,{});                                                  
+                                            </script>
+                                            <!-- var graphs = {{plot.mapgraph | safe}} -->  
+                                            
+                                        </div>
+                                    </center>
                                 </div>
                             </div>
                         </div>
@@ -129,13 +131,15 @@
                                 <!-- Card Body -->
                                 
                                 <div class="card-body">
-                                    <div class="chart-area", id="treegraph", style="height: min-content;">
-                                        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-                                        <script type="text/javascript">
-                                            var graphs = {{ plot.treegraph | safe}};
-                                            Plotly.plot('treegraph',graphs,{});        
-                                        </script>
-                                    </div>
+                                    <center>                                
+                                        <div class="chart-area", id="treegraph">
+                                            <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+                                            <script type="text/javascript">
+                                                var graphs = {{ plot.treegraph | safe}};
+                                                Plotly.plot('treegraph',graphs,{});        
+                                            </script>
+                                        </div>
+                                    <center>                                    
                                 </div>
                             </div>
                         </div>
@@ -152,13 +156,15 @@
                                 <!-- Card Body -->
 
                                 <div class="card-body">
-                                    <div class="chart-area", id="timegraph", style="height: min-content;">
-                                        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-                                        <script type="text/javascript">
-                                            var graphs = {{plot.timegraph | safe}};
-                                            Plotly.plot('timegraph',graphs,{});
-                                        </script>
+                                    <center>                                
+                                        <div class="chart-area", id="timegraph">
+                                            <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+                                            <script type="text/javascript">
+                                                var graphs = {{plot.timegraph | safe}};
+                                                Plotly.plot('timegraph',graphs,{});
+                                            </script>
                                     </div>
+                                    <center>                                    
                                 </div>
                             </div>
                         </div>
